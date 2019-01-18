@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bài 5</title>
+</head>
+<body>
+	<input type="text" id="name_star">
+	<button id="click" onclick="search()" value="find">Search</button>
+	<p id="show"></p>
+<script type="text/javascript">
+	var namestar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+	var starcoppy = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+	function search(){
+		var input = document.getElementById('name_star').value;
+		for (var i = 0; i < namestar.length; i++) {
+		if (namestar[i]==input){
+			document.getElementById('show').innerHTML = starcoppy[i];
+		}
+	}
+}
+</script>
+</body>
+</html>
